@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillPilot | Courses</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/CSS/style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+
+    /* HEADER */
+    /* .video-header {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .video-header video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.4);
+    }
+
+    .overlay-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 4rem;
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      color: #fff;
+    }
+
+    .overlay-content h1 {
+      font-size: 3rem;
+      color: #f06543;
+    } */
+
+       .hero-section {
+      position: relative;
+      height: 80vh;
+      overflow: hidden;
+    }
+
+    .hero-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.3);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .hero-overlay h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #f06543;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 0.15em solid orange;
+      animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent }
+      50% { border-color: orange; }
+    }
+
+    .hero-overlay p {
+      color: #ddd;
+      font-size: 1.2rem;
+      max-width: 800px;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+     .promo-banner {
+      background: linear-gradient(to right, #ff3d1f, #f06543);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      margin: 50px 0;
+      color: #fff;
+      font-size: 1.2rem;
+      animation: pulse 1s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.02); }
+    }
+
+    /* FILTER BUTTONS */
+    .filter-buttons {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .btn-filter {
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    /* COURSE CARDS */
+    .course-card {
+      background: linear-gradient(to right, #1a1a1a, #121212);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.3s;
+      box-shadow: 0 0 15px rgba(255, 87, 51, 0.1);
+    }
+
+    .course-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(255, 87, 51, 0.5);
+    }
+
+    .course-img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .badge-premium {
+      background-color: #ff5733;
+    }
+
+    .badge-free {
+      background-color: #28a745;
+    }
+
+    .btn-learn {
+      background: linear-gradient(to right, #f06543, #ff3c1f);
+      color: white;
+      border-radius: 20px;
+    }
+
+    .btn-learn:hover {
+      box-shadow: 0 0 12px #f06543;
+      color: #211f1f;
+      }
+
+    .course-grid {
+      background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(255, 87, 51, 0.2);
+    }
+
+    /* DETAILS SECTION */
+    .section-title {
+      color: #f06543;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .card-highlight {
+      background: linear-gradient(135deg, #ff5e3a, #ff2a68);
+      color: #fff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(255, 94, 58, 0.4);
+    }
+
+    .side-panel {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(240, 101, 67, 0.3);
+    }
+
+    .btn-buy, .btn-enroll {
+      width: 100%;
+      border-radius: 25px;
+      padding: 10px;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-buy {
+      background: linear-gradient(to right, #f06543, #ff3d1f);
+      color: white;
+    }
+
+    .btn-buy:hover {
+      box-shadow: 0 0 15px #ff3d1f;
+    }
+
+    .btn-enroll {
+      background: linear-gradient(to right, #28a745, #5adb65);
+      color: white;
+    }
+
+    .btn-enroll:hover {
+      box-shadow: 0 0 15px #28a745;
+    }
+
+    .feature-icon {
+      color: #ff6f61;
+      margin-right: 10px;
+    }
+
+    .review {
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+<!-- --------------------Navbar---------------- -->
+<nav>
+  <div class="lft-nav">
+    <a href="#"><img src="./assets/images/logo.png" alt="logo" width="100"></a>
+
+  </div>
+  <div class="cent-nav">
+    <a href="index.html">HOME</a>
+    <a href="#">ABOUT US</a>
+    <a href="courses.html">COURSES</a>
+    <a href="#">CONTACT US</a>
+    <a href="#">LOGIN</a>
+  </div>
+  <div class="right-nav">
+    <button>Get Started</button>
+  
+  </div>
+
+  <i class="ri-menu-3-line"></i>
+
+</nav>
+
+<!-- --------------- responsive navbar------------ -->
+<div class="responsive-nav">
+  <i class="ri-close-large-line"></i>
+  <a href="#">HOME</a>
+    <a href="#">ABOUT US</a>
+    <a href="#">COURSES</a>
+    <a href="#">CONTACT US</a>
+    <a href="#">LOGIN</a>
+     <div class="res-nav-btn">
+    <button>Get Started</button>
+    
+  </div>
+</div>
+<header>
+
+   <!-- Hero Section -->
+  <div class="hero-section" id="vanta-canva">
+    <video autoplay muted loop>
+      <!-- <source src="./images/vd1.mp4" type="video/mp4"> -->
+    </video>
+    <div class="hero-overlay">
+      <h1>Transform Your Future with In-Demand Skills</h1>
+      <p>Unlock your potential with our expertly curated learning paths. Whether you're into AI, web development, design, or business skills, we've got something to help you grow. Start your journey now!<br><br>
+      From beginner-friendly foundations to expert-level challenges, our platform empowers every learner. Gain practical experience, earn certifications, and boost your career — all in one place.</p>
+    </div>
+  </div>
+
+    <!-- Promo Banner -->
+  <div class="container">
+    <div class="promo-banner">
+      🚀 Special Deal: 50% OFF All Premium Courses - Limited Time!
+    </div>
+  </div>
+
+  <!-- 🔘 Filters -->
+  <div class="container">
+    <div class="filter-buttons" data-aos="fade-up">
+      <button class="btn btn-outline-light btn-filter" onclick="filterCourses('all')">All</button>
+      <button class="btn btn-outline-success btn-filter" onclick="filterCourses('free')">Free</button>
+      <button class="btn btn-outline-warning btn-filter" onclick="filterCourses('premium')">Premium</button>
+    </div>
+  </div>
+
+  <!-- 📚 Course Cards -->
+  <div class="container course-grid">
+    <div class="row" id="courseRow">
+      <!-- Injected by JavaScript -->
+    </div>
+  </div><br><br>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const courses = [
+      { title: "AI Mastery", badge: "premium", img: "images/1.webp", text: "Dive into artificial intelligence." },
+      { title: "Web Dev Bootcamp", badge: "free", img: "images/2.jpg", text: "Full-stack development." },
+      { title: "UI/UX Design", badge: "premium", img: "images/3.png", text: "Craft beautiful interfaces." },
+      { title: "Python Programming", badge: "free", img: "images/4.jpg", text: "From basics to advanced." },
+      { title: "Cyber Security", badge: "premium", img: "images/5.jpg", text: "Protect digital assets." },
+      { title: "Cloud Computing", badge: "premium", img: "images/6.jpg", text: "Master AWS & Azure." },
+      { title: "Mobile App Dev", badge: "free", img: "images/7.jpg", text: "Build iOS and Android apps." },
+      { title: "Digital Marketing", badge: "free", img: "images/8.jpg", text: "SEO, ads & growth hacks." },
+      { title: "Blockchain Basics", badge: "premium", img: "images/9.jpg", text: "Explore web3 & crypto." },
+      { title: "Machine Learning", badge: "free", img: "images/10.jpg", text: "Predictive modeling skills." },
+      { title: "Graphic Design", badge: "premium", img: "images/11.jpg", text: "Design like a pro." },
+      { title: "Business Strategy", badge: "premium", img: "images/12.jpg", text: "Boost startup mindset." },
+      { title: "Excel Mastery", badge: "free", img: "images/13.jpg", text: "Data tools & automation." },
+      { title: "Ethical Hacking", badge: "premium", img: "images/14.jpg", text: "Penetration testing skills." },
+      { title: "Video Editing", badge: "free", img: "images/15.jpg", text: "Create cinematic content." }
+    ];
+
+    function renderCourses(filter = 'all') {
+      const row = document.getElementById('courseRow');
+      row.innerHTML = '';
+      courses.filter(c => filter === 'all' || c.badge === filter).forEach(course => {
+        row.innerHTML += `
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="course-card">
+              <img src="${course.img}" class="course-img" />
+              <div class="p-3">
+                <h5>${course.title}</h5>
+                <p>${course.text}</p>
+                <span class="badge ${course.badge === 'free' ? 'badge-free' : 'badge-premium'}">${course.badge.toUpperCase()}</span>
+                <a href="detail.html" class="btn btn-learn btn-sm d-block mt-3">Learn More</a>
+              </div>
+            </div>
+          </div>`;
+      });
+    }
+
+    function filterCourses(type) {
+      renderCourses(type);
+    }
+
+    // Initial render
+    renderCourses();
+  </script>
+
+  <!-- ---- Animated 3d background--- -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.134/build/three.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+<script>
+    VANTA.NET({
+      el: "#vanta-canva",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 700.00,
+      minWidth: 700.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0xde653f,
+      backgroundColor: 0x16171b,
+      spacing: 18.00,
+      showDots:false
+     
+  })
+</script>
+</body>
+</html>
