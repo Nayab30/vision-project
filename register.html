@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/assets/CSS/register.css">
+    <link rel="stylesheet" href="/assets/CSS/style.css">
+
+</head>
+<body>
+    <div class="cursor" id="cursor"></div>
+  <!-- --------------- Head Section----------- -->
+  <header>
+<!-- --------------------Navbar---------------- -->
+<nav>
+  <div class="lft-nav">
+    <a href="#"><img src="./assets/images/logo.png" alt="logo" width="100"></a>
+
+  </div>
+  <div class="cent-nav">
+    <a href="/index.html">HOME</a>
+    <a href="#">ABOUT US</a>
+    <a href="courses.html">COURSES</a>
+    <a href="#">CONTACT US</a>
+    <a href="#">LOGIN</a>
+  </div>
+  <div class="right-nav">
+    <button><a href="register.html">Get Started</a></button>
+  
+  </div>
+
+  <i class="ri-menu-3-line"></i>
+
+</nav>
+
+<!-- --------------- responsive navbar------------ -->
+<div class="responsive-nav">
+  <i class="ri-close-large-line"></i>
+  <a href="index.html">HOME</a>
+    <a href="#">ABOUT US</a>
+    <a href="#">COURSES</a>
+    <a href="#">CONTACT US</a>
+    <a href="#">LOGIN</a>
+     <div class="res-nav-btn">
+    <button>Get Started</button>
+    
+  </div>
+</div>
+    <div class="container">
+<h1>Registration Form</h1>
+<p class="helper">Fill your details step-by-step. You can add multiple phone numbers and education entries in the relevant steps.</p>
+
+
+<!-- Progress -->
+<div class="progress-wrap" aria-hidden="false">
+<div class="progress-track" aria-hidden="true">
+<div id="progressBar" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+</div>
+<div class="steps-indicators" id="indicators">
+<div class="step-indicator active" data-step="0"><span>1</span><small>Personal</small></div>
+<div class="step-indicator" data-step="1"><span>2</span><small>Account</small></div>
+<div class="step-indicator" data-step="2"><span>3</span><small>Education</small></div>
+<div class="step-indicator" data-step="3"><span>4</span><small>Address</small></div>
+<div class="step-indicator" data-step="4"><span>5</span><small>Review</small></div>
+</div>
+</div>
+
+    <form id="regForm" autocomplete="off">
+      <!-- Step 1: Personal -->
+      <section class="step active" data-step="0">
+        <div class="row">
+          <div class="col field-row">
+            <label for="firstName">First name *</label>
+            <input id="firstName" name="firstName" type="text" required placeholder="">
+          </div>
+          <div class="col field-row">
+            <label for="lastName">Last name *</label>
+            <input id="lastName" name="lastName" type="text" required placeholder="">
+          </div>
+        </div>
+        <div class="field-row">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required placeholder="">
+        </div>
+
+        <div class="field-row">
+          <label>Phone numbers (you can add multiple)</label>
+          <div id="phonesContainer">
+            <div class="list-item">
+              <input name="phones[]" type="tel" placeholder="" required>
+              <button type="button" class="remove-btn" title="Remove" style="display:none">Remove</button>
+            </div>
+          </div>
+          <div style="margin-top:8px"><button type="button" id="addPhoneBtn" class="btn-ghost">+ Add phone</button></div>
+        </div>
+      </section>
+
+      <!-- Step 2: Account -->
+      <section class="step" data-step="1">
+        <div class="field-row">
+          <label for="username">Username *</label>
+          <input id="username" name="username" type="text" required placeholder="">
+        </div>
+        <div class="row">
+          <div class="col field-row">
+            <label for="password">Password *</label>
+            <input id="password" name="password" type="password" required placeholder="Password (min 6 chars)">
+          </div>
+          <div class="col field-row">
+            <label for="confirmPassword">Confirm password *</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" required placeholder="Repeat password">
+          </div>
+        </div>
+        <div class="field-row">
+          <label><input id="acceptTerms" name="acceptTerms" type="checkbox" required> I accept the terms and conditions *</label>
+        </div>
+      </section>
+
+      <!-- Step 3: Education / Skills (dynamic) -->
+      <section class="step" data-step="2">
+        <div class="field-row">
+          <label>Education (add one or more)</label>
+          <div id="eduContainer">
+            <div class="list-item">
+              <input name="education[0][institution]" placeholder="Institute - e.g. ABC College">
+              <input name="education[0][degree]" placeholder="Degree - e.g. FSc">
+              <button type="button" class="remove-btn" style="display:none">Remove</button>
+            </div>
+          </div>
+          <div style="margin-top:8px"><button type="button" id="addEduBtn" class="btn-ghost">+ Add education</button></div>
+        </div>
+
+        <!-- <div class="field-row">
+          <label for="skillsInput">Skills (comma separated or add individually)</label>
+          <div style="display:flex;gap:8px;align-items:center">
+            <input id="skillsInput" placeholder="Type skill and press Add" />
+            <button type="button" id="addSkillBtn" class="btn-ghost">Add</button>
+          </div>
+          <div id="skillsList" style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap"></div>
+        </div> -->
+      </section>
+
+      <!-- Step 4: Address -->
+      <section class="step" data-step="3">
+        <div class="field-row">
+          <label for="country">Country *</label>
+          <input id="country" name="country" type="text" required placeholder="">
+        </div>
+        <div class="row">
+          <div class="col field-row">
+            <label for="city">City *</label>
+            <input id="city" name="city" type="text" required placeholder="">
+          </div>
+          <div class="col field-row">
+            <label for="zip">ZIP / Postal</label>
+            <input id="zip" name="zip" type="text" placeholder="">
+          </div>
+        </div>
+        <div class="field-row">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" placeholder=""></textarea>
+        </div>
+      </section>
+
+      <!-- Step 5: Review -->
+      <section class="step" data-step="4">
+        <h3 style="color:var(--text-color);">Review your details</h3>
+        <div class="review-list" id="reviewArea"></div>
+      </section>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <div>
+          <button type="button" id="prevBtn" class="btn-ghost" style="display:none">◀ Back</button>
+        </div>
+        <div>
+          <button type="button" id="nextBtn" class="btn-primary">Next ▶</button>
+          <button type="submit" id="submitBtn" class="btn-primary" style="display:none">Submit</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+
+    <script src="/assets/JS/register.js"></script>
+    <script src="/assets/JS/script.js"></script>
+
+</body>
+</html>

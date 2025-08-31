@@ -18,6 +18,62 @@ width: 100%;
 height: 100%;
 }
 
+/* custom cursor */
+/* Main glowing cursor */
+    .cursor {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      background: rgba(240, 59, 4, 0.5); /* #de653f with transparency */
+      box-shadow: 0 0 20px rgba(222, 101, 63, 0.8), 
+                  0 0 40px rgba(222, 101, 63, 0.6),
+                  0 0 60px rgba(222, 101, 63, 0.4);
+      transition: transform 0.08s ease;
+      z-index: 9999;
+    }
+
+    /* Glowing pulse */
+    .cursor::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(222, 101, 63, 0.2);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+      100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+    }
+
+    /* Ripple effect on click */
+    .click-ripple {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #de653f;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(0);
+      animation: ripple 0.6s ease-out forwards;
+      z-index: 9998;
+    }
+
+    @keyframes ripple {
+      to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+      }
+    }
+
 nav{
     display:flex;
     align-items: center;
