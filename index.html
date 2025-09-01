@@ -12,6 +12,8 @@
 
 <!-- CSS file -->
 <link rel="stylesheet" href="./assets/CSS/style.css">
+<link rel="stylesheet" href="./assets/CSS/index.css">
+
 
 <!-- Remix ICON CDN -->
 <link
@@ -25,145 +27,23 @@
 <!-- Bootstrap JS bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-  <style>
-    .chatbot{
-      background:var(--bg-base-color);
-      margin: 0;
-      height: 100vh;
-    }
 
-    .chat-container {
-      width: 400px;
-      height: 440px;
-      background: var(--bg-base-color);
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      z-index: 1000;
-      transition: 0.3s ease;
-    }
-
-    .chat-header {
-      background: #de653f;
-      color: rgb(0, 0, 0);
-      padding: 12px;
-      font-size: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: 'Courier New', Courier, monospace;
-
-    }
-
-    .chat-header .title {
-      font-weight: bold;
-      font-family: 'Courier New', Courier, monospace;
-
-    }
-
-    .chat-header button {
-      background: rgb(10, 10, 10);
-      color: #eff0f2;
-      border: none;
-      padding: 5px 8px;
-      margin-left: 5px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 10px;
-    }
-
-    .chat-box {
-      flex: 1;
-      padding: 10px;
-      overflow-y: auto;
-      font-size: 12px;
-    }
-
-    .bot-message, .user-message {
-      max-width: 70%;
-      padding: 8px 12px;
-      margin: 5px 0;
-      border-radius: 10px;
-      clear: both;
-      word-wrap: break-word;
-    }
-
-    .bot-message {
-      background: #e1f5fe;
-      float: left;
-      font-family: 'Courier New', Courier, monospace;
-
-    }
-
-    .user-message {
-      background: #e1cea4;
-      float: right;
-      font-family: 'Courier New', Courier, monospace;
-
-    }
-
-    .chat-input {
-      display: flex;
-      border-top: 1px solid #2c2b2b;
-      font-family: 'Courier New', Courier, monospace;
-
-    }
-
-    .chat-input input {
-      flex: 1;
-      border: none;
-      padding: 10px;
-      font-size: 14px;
-      outline: none;
-      background-color: #484646;
-      color:white;
-      font-family: 'Courier New', Courier, monospace;
-
-    }
-
-    .chat-input button {
-      background:  #de653f;
-      color: rgb(7, 7, 7);
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-family: 'Courier New', Courier, monospace;
-
-    }
-
-    .fullscreen {
-      width: 90vw !important;
-      height: 80vh !important;
-      border-radius: 0 !important;
-    }
-
-    .chatbot-icon {
-      width: 60px;
-      height: 60px;
-      background:  #de653f url('https://cdn-icons-png.flaticon.com/512/4712/4712035.png') no-repeat center;
-      background-size: 60%;
-      border-radius: 50%;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      z-index: 1001;
-    }
-  </style>
 
 </head>
 <body style="overflow-x: hidden;" >
-  <div class="cursor" id="cursor"></div>
+  <!-- preloader -->
+     <div class="preloader">
+    <div class="neon-loader">
+      <div class="neon-loader-ring"></div>
+    </div>
+  </div>
+
+  <!-- custom cursor -->
+  <!-- <div class="cursor" id="cursor"></div> -->
   <!-- --------------- Head Section----------- -->
   <header>
 <!-- --------------------Navbar---------------- -->
-<nav>
+<nav id="navbar">
   <div class="lft-nav">
     <a href="#"><img src="./assets/images/logo.png" alt="logo" width="100"></a>
 
@@ -193,7 +73,7 @@
     <a href="#">CONTACT US</a>
     <a href="#">LOGIN</a>
      <div class="res-nav-btn">
-    <button>Get Started</button>
+     <button><a href="register.html">Get Started</a></button>>
     
   </div>
 </div>
@@ -237,7 +117,131 @@
 
 
   </header>
+<section>
+<div class=" ban2">
+  <h1>Learn <span style="color:var(--text-color);"> 15+</span> Languages</h1>
+  <p>Browse courses and discover the best option for you. SkillPilot is my effort to teach the basics and those coding techniques in a short time that took me years to master.</p>
+<div class="ban2-content">
+  <div class="marquee">
+    <div class="content">
+      <img src="assets/images/c.png" alt="img" width="100">
+    </div>
+    <div class="content"><img src="/assets/images/p2.png" alt="img" width="100"></div>
+    <div class="content"><img src="/assets/images/p3.png" alt="img" width="50"></div>
+    <div class="content"><img src="/assets/images/p4.png" alt="img" width="50"></div>
+    <div class="content"><img src="/assets/images/p5.png" alt="img" width="50"></div>
+    <div class="content"><img src="/assets/images/p6.png" alt="img" width="100"></div>
+    <div class="content"><img src="/assets/images/p7.png" alt="img" width="70"></div>
+    <div class="content"><img src="/assets/images/p8.png" alt="img" width="90"></div>
+    <div class="content"><img src="/assets/images/p9.png" alt="img" width="70"></div>
+    <div class="content"><img src="/assets/images/p10.png" alt="img" width="70"></div>
+    <div class="content"><img src="/assets/images/p11.png" alt="img" width="90"></div>
+    <div class="content"><img src="/assets/images/p12.png" alt="img" width="80"></div>
+    <div class="content"><img src="/assets/images/p13.png" alt="img" width="70"></div>
+    <div class="content"><img src="/assets/images/p14.png" alt="img" width="70"></div>
+    <div class="content"><img src="/assets/images/p15.png" alt="img" width="70"></div>
 
+
+    
+
+  </div>
+  <div class="marquee2">
+        <div class="content">
+      <img src="/assets/images/c.png" alt="img" width="100">
+    </div>
+    <div class="content2"><img src="/assets/images/p2.png" alt="img" width="100"></div>
+    <div class="content2"><img src="/assets/images/p3.png" alt="img" width="50"></div>
+    <div class="content2"><img src="/assets/images/p4.png" alt="img" width="50"></div>
+    <div class="content2"><img src="/assets/images/p5.png" alt="img" width="50"></div>
+    <div class="content2"><img src="/assets/images/p6.png" alt="img" width="100"></div>
+    <div class="content2"><img src="/assets/images/p7.png" alt="img" width="70"></div>
+    <div class="content2"><img src="/assets/images/p8.png" alt="img" width="90"></div>
+    <div class="content2"><img src="/assets/images/p9.png" alt="img" width="70"></div>
+    <div class="content2"><img src="/assets/images/p10.png" alt="img" width="70"></div>
+    <div class="content2"><img src="/assets/images/p11.png" alt="img" width="90"></div>
+    <div class="content2"><img src="/assets/images/p12.png" alt="img" width="80"></div>
+    <div class="content2"><img src="/assets/images/p13.png" alt="img" width="70"></div>
+    <div class="content2"><img src="/assets/images/p14.png" alt="img" width="70"></div>
+    <div class="content2"><img src="/assets/images/p15.png" alt="img" width="70"></div>
+
+
+</div>
+
+<div class="marquee3">
+        <div class="content">
+      <img src="/assets/images/c.png" alt="img" width="100">
+    </div>
+    <div class="content"><img src="/assets/images/p2.png" alt="img" width="100"></div>
+    <div class="content"><img src="/assets/images/p3.png" alt="img" width="50"></div>
+    <div class="content"><img src="/assets/images/p4.png" alt="img" width="50"></div>
+    <div class="content"><img src="/assets/images/p5.png" alt="img" width="50"></div>
+    <div class="content"><img src="/assets/images/p6.png" alt="img" width="100"></div>
+    <div class="content"><img src="/assets/images/p7.png" alt="img" width="70"></div>
+    <div class="content"><img src="/assets/images/p8.png" alt="img" width="90"></div>
+    <div class="content"><img src="/assets/images/p9.png" alt="img" width="70"></div>
+    <div class="content"><img src="/assets/images/p10.png" alt="img" width="70"></div>
+    <div class="content"><img src="/assets/images/p11.png" alt="img" width="90"></div>
+    <div class="content"><img src="/assets/images/p12.png" alt="img" width="80"></div>
+    <div class="content"><img src="/assets/images/p13.png" alt="img" width="70"></div>
+    <div class="content"><img src="/assets/images/p14.png" alt="img" width="70"></div>
+    <div class="content"><img src="/assets/images/p15.png" alt="img" width="70"></div>
+
+
+</div>
+
+
+</div>
+
+</section>
+<section>
+  <div class="ban3">
+     <h1>Code Smarter with  <span style="color:var(--text-color);"> Real-World</span>  Practice</h1>
+  <p>At SkillPilot, you don't just learn code — you engage in practical exercises that reflect real-world scenarios. From beginner-friendly lessons to advanced courses trusted by professionals, we prepare you for real-world project</p>
+    <div class="ban3-row">
+      <div class="col">
+        <i class="ri-code-box-line"></i>
+        <h2>Sharpen your code skill</h2>
+        <p>Challenge yourself on small coding exercises . It is help you strengthen different coding techniques. Master your current language of choice, or quickly pick up any of the 15+ programming languages supported.</p>
+
+      </div>
+      <div class="col">
+        <img src="./assets/images/ban3.png" alt="">
+
+      </div>
+
+    </div>
+    
+    
+
+  </div>
+
+</section>
+<section>
+  <div class="ban4">
+    <h1>Beyond Learning:  <span style="color:var(--text-color);">Your Transformation Pathway</span>  </h1>
+ 
+
+    <div class="ban4-row">
+      <div class="ban4-col">
+        <div class="ban4-icon"><i class="ri-umbrella-line"></i></div>
+        <h2>Beginner-Friendly</h2>
+        <p>Step-by-step courses designed for absolute beginners to kickstart their coding journey.</p>
+      </div>
+      <div class="ban4-col">
+         <div class="ban4-icon"><i class="ri-stack-line"></i></div>
+        <h2>Advanced Concepts</h2>
+        <p>Deep dive into advanced topics and frameworks to level up your skills.</p>
+      </div>
+      <div class="ban4-col">
+         <div class="ban4-icon"><i class="ri-code-line"></i></div>
+        <h2>Real-World Projects</h2>
+        <p>Learn by building real-world projects and gain hands-on experience.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
   
  
 
@@ -294,7 +298,7 @@
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 700.00,
+      minHeight: 550.00,
       minWidth: 700.00,
       scale: 1.00,
       scaleMobile: 1.00,
@@ -306,125 +310,9 @@
   })
 </script>
     <script src="./assets/JS/script.js"></script>
+    <script src="./assets/JS/chatbot.js"></script>
 
-    <script>
-    const chatBox = document.getElementById("chat-box");
-    const userInput = document.getElementById("user-input");
-    const sendBtn = document.getElementById("send-btn");
-    const newChatBtn = document.getElementById("new-chat-btn");
-    const fullscreenBtn = document.getElementById("fullscreen-btn");
-    const chatContainer = document.getElementById("chat-container");
-    const chatbotIcon = document.getElementById("chatbot-icon");
 
-    //  Gemini API
-    const API_KEY = "AIzaSyDRQ_cyqmOyu2v2f_iJIbJ0F2XY5t0uC6g"; 
-    const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + API_KEY;
-
-    //  SkillPilot trained responses
-    const skillPilotResponses = {
-      "courses": " SkillPilot offers Web Development, Data Science, AI, and Digital Marketing courses.",
-      "offers": " Limited-time offer: 50% OFF on Web Dev & AI courses this month!",
-      "about": "I'm SkillPilot Bot. I help you explore courses and special deals.",
-      "contact": " Contact us: support@skillpilot.com | +92-300-1234567"
-    };
-
-    //  Show/hide chatbot
-    chatbotIcon.addEventListener("click", () => {
-      chatContainer.style.display = chatContainer.style.display === "flex" ? "none" : "flex";
-      if(chatBox.innerHTML.trim() === "") {
-        addBotMessage("Hello , I'm SkillPilot Bot! ");
-      }
-    });
-
-    //  Streaming text effect
-    function streamMessage(element, text, speed = 40) {
-      let i = 0;
-      function typeWriter() {
-        if (i < text.length) {
-          element.textContent += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, speed);
-          chatBox.scrollTop = chatBox.scrollHeight;
-        }
-      }
-      typeWriter();
-    }
-
-    function addBotMessage(text, streaming = true) {
-      let botMsg = document.createElement("div");
-      botMsg.className = "bot-message";
-      chatBox.appendChild(botMsg);
-      if(streaming) {
-        streamMessage(botMsg, text);
-      } else {
-        botMsg.textContent = text;
-      }
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    function addUserMessage(text) {
-      let userMsg = document.createElement("div");
-      userMsg.className = "user-message";
-      userMsg.textContent = text;
-      chatBox.appendChild(userMsg);
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    //  Send message
-    async function sendMessage(msg) {
-  addUserMessage(msg);
-
-  let lowerMsg = msg.toLowerCase();
-
-  // Look for a keyword in the input
-  for (let key in skillPilotResponses) {
-    if (lowerMsg.includes(key)) {
-      addBotMessage(skillPilotResponses[key], true);
-      return;
-    }
-  }
-
-  // Otherwise → Gemini
-  const requestBody = {
-    contents: [{ parts: [{ text: msg }] }]
-  };
-
-  try {
-    let response = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(requestBody)
-    });
-
-    let data = await response.json();
-    let output = data.candidates[0].content.parts[0].text;
-    addBotMessage(output, true);
-  } catch (error) {
-    addBotMessage("Error: Could not connect.", false);
-  }
-}
-
-    //  Event Listeners
-    sendBtn.addEventListener("click", () => {
-      let msg = userInput.value.trim();
-      if(msg) {
-        sendMessage(msg);
-        userInput.value = "";
-      }
-    });
-
-    userInput.addEventListener("keypress", (e) => {
-      if(e.key === "Enter") sendBtn.click();
-    });
-
-    newChatBtn.addEventListener("click", () => {
-      chatBox.innerHTML = "";
-      addBotMessage(" New chat started with SkillPilot Bot!");
-    });
-
-    fullscreenBtn.addEventListener("click", () => {
-      chatContainer.classList.toggle("fullscreen");
-    });
-  </script>
+    
 </body>
 </html>

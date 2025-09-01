@@ -1,3 +1,23 @@
+// navbar show on scroll up
+let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        // scrolling down → hide navbar
+        navbar.style.top = "-100px";
+      } else {
+        // scrolling up → show navbar
+        navbar.style.top = "0";
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // avoid negative scroll
+    });
+
+
+
 // responsive navbar
 
 var menu = document.querySelector(".ri-menu-3-line");
@@ -33,3 +53,17 @@ cross.addEventListener("click", function(){
       setTimeout(() => ripple.remove(), 600); // Remove after animation
     });
     
+
+    // preloader
+
+    
+    // Hide preloader when page loads
+    window.addEventListener("load", function(){
+      document.querySelector(".preloader").style.display = "none";
+    });
+ 
+
+
+
+
+ 

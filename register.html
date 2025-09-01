@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+
+    <!-- Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+<!-- Remix ICON CDN -->
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+<!--  css file -->
     <link rel="stylesheet" href="/assets/CSS/register.css">
     <link rel="stylesheet" href="/assets/CSS/style.css">
 
+  
+
+
+
 </head>
-<body>
-    <div class="cursor" id="cursor"></div>
+<body style="overflow-x: hidden;" >
+  <!-- preloader -->
+     <div class="preloader">
+    <div class="neon-loader">
+      <div class="neon-loader-ring"></div>
+    </div>
+  </div>
+
+  <!-- custom cursor -->
+  <!-- <div class="cursor" id="cursor"></div> -->
   <!-- --------------- Head Section----------- -->
   <header>
 <!-- --------------------Navbar---------------- -->
-<nav>
+<nav id="navbar">
   <div class="lft-nav">
     <a href="#"><img src="./assets/images/logo.png" alt="logo" width="100"></a>
 
@@ -43,10 +67,12 @@
     <a href="#">CONTACT US</a>
     <a href="#">LOGIN</a>
      <div class="res-nav-btn">
-    <button>Get Started</button>
+     <button><a href="register.html">Get Started</a></button>>
     
   </div>
 </div>
+
+  </header>
     <div class="container">
 <h1>Registration Form</h1>
 <p class="helper">Fill your details step-by-step. You can add multiple phone numbers and education entries in the relevant steps.</p>
@@ -186,6 +212,8 @@
 
     <script src="/assets/JS/register.js"></script>
     <script src="/assets/JS/script.js"></script>
+    
+
 
 </body>
 </html>
