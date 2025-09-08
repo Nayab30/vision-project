@@ -61,6 +61,46 @@ cross.addEventListener("click", function(){
     window.addEventListener("load", function(){
       document.querySelector(".preloader").style.display = "none";
     });
+
+    // lenis smooth scroll
+
+    // Initialize Lenis
+const lenis = new Lenis();
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+
+// Split letters into spans
+  const textElement = document.querySelector(".reveal-text");
+  const letters = textElement.textContent.split("");
+  textElement.textContent = "";
+  letters.forEach((letter, i) => {
+    const span = document.createElement("span");
+    span.textContent = letter;
+    textElement.appendChild(span);
+  });
+
+  // Animate on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const spans = entry.target.querySelectorAll("span");
+        spans.forEach((span, i) => {
+          setTimeout(() => {
+            span.classList.add("active");
+          }, i * 80); // delay between letters
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(textElement);
  
 
 
