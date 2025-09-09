@@ -1,11 +1,11 @@
-*{
+ /* *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
     font-family:"Audiowide", sans-serif ;
-}
+} */
 
-
+/*
 :root{
     --bg-base-color:#16171b;
     --bg-second:#de653f;
@@ -635,3 +635,349 @@ border-radius: 8px;
     text-align: center;
 }
 
+/* banner5 */
+
+.ban5{
+  width: 100%;
+  height:70vh;
+  padding-top: 80px;
+
+}
+
+.ban5-row{
+  display: flex;
+  justify-content: center;
+  margin-top: -60px;
+  padding-left: 8vw;
+ 
+
+}
+
+.ban5-col{
+  width: 40vw;
+  height: 30vw;
+  /* border: 1px solid wheat; */
+}
+
+.ban5-col .ban5-img {
+  width: 400px;
+  height: 450px;
+  /* border: 1px solid var(--bg-second); */
+  border-radius: 20px;
+   box-shadow: #de653f 0px 6px 12px -2px,
+                rgba(232, 128, 8, 0.3) 0px 3px 7px -3px;
+
+margin-left: 80px;
+ 
+
+}
+.ban5-col .circle-img{
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  /* border: 1px solid var(--bg-second); */
+  margin-top: -550px;
+  margin-left: 320px;
+
+  
+
+}
+.ban5-col .circle-img img{
+  width: 200px;
+  height: 200px;
+   /* box-shadow: 0 0 25px #de653f; */
+   filter: drop-shadow(1px 1px 20px #de653f);
+   border-radius: 50%;
+  
+} 
+
+.auto-rotate{
+  animation: AutoRotate;
+  animation-timeline: view();
+}
+
+@keyframes AutoRotate{
+  from {
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.ban5-col .ban5-content{
+  margin: 60px;
+  margin-left: -20px;
+}
+.ban5-col .ban5-content p{
+color: beige;
+font-size: 14px;
+opacity: 0.6;
+}
+
+.ban5-col .ban5-content h1{
+  width: 400px;
+  color: beige;
+  font-size: 30px;
+}
+
+
+.ban5-col .ban5-content .ban5-btn button{
+   padding: 1vw 2vw;
+    border-radius: 10px;
+    border: none;
+    font-size: 1vw;
+    background-color: var(--bg-second);
+    margin-top: 40px;
+}
+
+/* banner6- */
+
+:root {
+	--cards: 4;
+	--cardHeight: 70vh;
+	--cardTopPadding: 30px;
+	--cardMargin: 4vw;
+}
+
+.ban6{
+  padding-top: 8vw;
+}
+
+.ban6 .ban6-container {
+	width: 90%;
+	margin: 0 auto;
+  background-color: var(--bg-base-color);
+ 
+}
+
+.ban6 .ban6-container #cards {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+	margin-bottom: var(--cardMargin);
+  background-color: var(--bg-base-color);
+  border-radius: 50px;
+}
+
+.ban6 .ban6-container #card1 {
+	--index: 1;
+}
+.ban6 .ban6-container #card2 {
+	--index: 2;
+}
+.ban6 .ban6-container #card3 {
+	--index: 3;
+}
+
+
+.ban6 .ban6-container .card {
+	position: sticky;
+	top: 25%;
+	/* padding-top: calc(var(--index) * var(--cardTopPadding)); */
+  background-color: var(--bg-base-color);
+  border-radius: 50px;
+}
+
+.ban6 .ban6-container #card1 .card-body {
+	background-color: var(--bg-base-color);
+  color: beige;
+}
+.ban6 .ban6-container #card2 .card-body {
+	/* background-color: #7EC4CF; */
+	background-color:var(--bg-base-color);
+  color: beige;
+}
+.ban6 .ban6-container #card3 .card-body {
+	background-color: var(--bg-base-color);
+  color: beige;
+}
+
+
+.ban6 .ban6-container .card-body {
+  width: 70vw;
+	box-sizing: border-box;
+  margin-left: 150px;
+	padding: 30px;
+	border-radius: 50px;
+	box-shadow: 0 2px 30px 0 #de653f;
+	height: var(--cardHeight);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+}
+.ban6 .ban6-container .card-body .ban6-row{
+  display: flex;
+  justify-content: center;
+}
+
+.ban6 .ban6-container .card-body .ban6-row3{
+  display: flex;
+  justify-content: center;
+}
+.ban6 .ban6-container .card-body .ban6-row2{
+  display: flex;
+  justify-content: center;
+}
+
+.ban6 .ban6-container .card-body .ban6-row .ban6-col{
+  width: 30vw;
+  height: 30vw;
+  /* border: 1px solid wheat; */
+  color: beige;
+}
+
+.ban6 .ban6-container .card-body .ban6-row2 .ban6-col{
+  width: 39vw;
+  height: 30vw;
+  /* border: 1px solid wheat; */
+  color: beige;
+}
+
+.ban6 .ban6-container .card-body .ban6-row3 .ban6-col{
+  width: 30vw;
+  height: 30vw;
+  border: 1px solid wheat;
+  color: beige;
+}
+
+.ban6 .ban6-container .card-body .ban6-row .ban6-col img{
+  width: 300px;
+  height: 350px;
+  border-radius: 15px;
+  margin-top: 50px;
+  box-shadow:#de653f 0px 8px 24px;
+
+}
+
+/* .ban6 .ban6-container .card-body .ban6-row .ban6-col .ban6-img{
+  display: flex;
+} */
+
+.ban6 .ban6-container .card-body .ban6-row .ban6-col .ban6-img img{
+  width: 200px;
+  height: 200px;
+  margin-left: -35px;
+  box-shadow:#de653f 0px 8px 24px;
+}
+
+.ban6 .ban6-container .card-body .ban6-row2 .ban6-col .img-border{
+  width: 250px;
+  height: 200px;
+  border: 2px solid #de653f;
+  margin-left: -10px;
+  border-radius: 15px;
+  box-shadow:#de653f 0px 6px 18px;
+
+}
+.ban6 .ban6-container .card-body .ban6-row2 .ban6-col .img-border img{
+  width: 250px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow:#de653f 0px 4px 12px;
+
+
+
+ 
+}
+
+
+
+
+/* banner7 */
+
+.ban7 {
+  margin: 0;
+  height: 100vh;
+  margin-top: -200px;
+ 
+ 
+}
+
+.ban7 .wrapper {
+  overflow-x:hidden;
+  position: relative;
+}
+
+/* Progress bar SVG */
+.ban7 svg {
+  position: absolute;
+  top: 12em;
+  left: 10vw;
+  width: 50vw;
+  z-index: 10;
+ 
+}
+
+.ban7 .mask {
+  width: 0;
+}
+
+/* Corrected container selector */
+.ban7 .ban7-container {
+  display: flex;
+  width: 300vw; /* 3 sections = 300% */
+}
+
+/* Section text color */
+.ban7 .pin {
+  color: var(--bg-second, #de653f);
+}
+
+.ban7 .col {
+  display: flex;
+  gap: 3em;
+}
+
+.ban7 .col p {
+  font-size: 0.8rem;
+}
+
+.ban7 .ban7-container section {
+  width: 100vw;
+  padding: 20vw 10vw;
+}
+
+.ban7 .ban7-container section h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.ban7 .ban7-container section p {
+  font-size: 1.2rem;
+  width: 50vw;
+}
+
+.ban7 .ban7-container section ul {
+  list-style-type: none;
+  display: flex;
+  gap: 3em;
+  width: 100%;
+  height: 300px;
+  padding: 0;
+}
+
+.ban7 .ban7-container section ul li {
+  background: white;
+  border-radius: 0.3em;
+  flex-grow: 1;
+}
+
+.ban7  section {
+  height: 100vh;
+}
+
+
+/* banner8 */
+.ban8{
+  width: 100%;
+  height: 30vh;
+  background-color: black;
+}

@@ -361,9 +361,11 @@ nav{
 footer{
     width: 100%;
     height: 50vh;
-    /* background-color: var(--bg-base-color); */
-    background-color: black;
-    border-top: 2px solid #de653f;
+    background-color: var(--bg-base-color);
+    /* background-color: black; */
+    border-top: 2px dashed #de653f;
+  
+   
 }
 
 .ft-row{
